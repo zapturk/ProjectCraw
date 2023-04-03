@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://b61d31qd7laox"]
+
+[ext_resource type="Texture2D" uid="uid://b0ihbpkbe4m4i" path="res://Assets/ObjTiles.png" id="1_mcmpe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qol3d"]
+size = Vector2(16, 16)
+
+[node name="OneWayDoor" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mcmpe")
+hframes = 2
+vframes = 2
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qol3d")
+
+[node name="Ray" type="RayCast2D" parent="."]
+target_position = Vector2(0, 16)
+collision_mask = 2
+collide_with_areas = true
