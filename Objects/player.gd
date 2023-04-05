@@ -20,11 +20,20 @@ func _ready():
 func _physics_process(_delta):
 	if moving:
 		return
+		
 	for dir in inputs.keys():
 		if Input.is_action_pressed(dir):
 			move(dir)
 	if Input.is_action_just_pressed("ui_accept"):
 		openDoor()
+		
+	for body in get_overlapping_areas():
+		match body.get_collision_layer():
+			Global.movingTileLayer:
+				await move(body.dir)
+			_:
+				pass
+	
 
 func openDoor():
 	var obj = ray.get_collider()
@@ -40,6 +49,8 @@ func openDoor():
 			Global.oneWayDoorLayer:
 				if obj.get_node("Ray").is_colliding():
 					movePlayer(lastDir, 2)
+			Global.movingTileLayer:
+				movePlayer(lastDir, 2)
 			_:
 				pass
 
