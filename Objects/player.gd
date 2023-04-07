@@ -7,6 +7,7 @@ var inputs = {"ui_right": Vector2.RIGHT,
 			"ui_up": Vector2.UP,
 			"ui_down": Vector2.DOWN}
 @onready var ray = $RayCast2D
+@onready var fog = get_parent().get_node("Fog")
 
 var lastDir = inputs["ui_up"]
 
@@ -15,7 +16,7 @@ var lastDir = inputs["ui_up"]
 func _ready():
 	position = position.snapped(Vector2.ONE * tileSize)
 	position += Vector2.ONE * tileSize/2
-	get_parent().get_node("Fog").clearCell(Vector2i((position.x - 8)/tileSize, (position.y - 8)/tileSize))
+	fog.clearCell(currentPos(), Vector2i(lastDir))
 	
 func _physics_process(_delta):
 	if moving:
@@ -61,6 +62,8 @@ func move(dir):
 	ray.force_raycast_update()
 	if !ray.is_colliding():
 		movePlayer(dir)
+	else:
+		fog.clearCell(currentPos(), Vector2i(inputs[lastDir]))
 
 func movePlayer(dir, numOftimes = 1):
 	for x in numOftimes:
@@ -68,5 +71,8 @@ func movePlayer(dir, numOftimes = 1):
 		tween.tween_property(self, "position", position + inputs[dir] * tileSize, 1.0/4).set_trans(Tween.TRANS_SINE)
 		moving = true
 		await tween.finished
-		get_parent().get_node("Fog").clearCell(Vector2i((position.x - 8)/tileSize, (position.y - 8)/tileSize))
+		fog.clearCell(currentPos(), Vector2i(inputs[lastDir]))
 		moving = false
+		
+func currentPos():
+	return Vector2i((position.x - 8)/tileSize, (position.y - 8)/tileSize)
