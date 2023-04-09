@@ -34,7 +34,11 @@ window/stretch/mode="viewport"
 2d_physics/layer_3="Door"
 2d_physics/layer_4="OneWayDoor"
 2d_physics/layer_5="MovingTile"
+2d_physics/layer_6="Exit"
+2d_physics/layer_7="Treasure"
+2d_physics/layer_8="Stairs"
 
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+textures/vram_compression/import_s3tc_bptc=true

@@ -6,7 +6,7 @@ var inputs = {"ui_right": Vector2.RIGHT,
 			"ui_left": Vector2.LEFT,
 			"ui_up": Vector2.UP,
 			"ui_down": Vector2.DOWN}
-@onready var ray = $RayCast2D
+@onready var ray: RayCast2D = $RayCast2D
 @onready var fog = get_parent().get_node("Fog")
 
 var lastDir = inputs["ui_up"]
@@ -26,17 +26,32 @@ func _physics_process(_delta):
 		if Input.is_action_pressed(dir):
 			move(dir)
 	if Input.is_action_just_pressed("ui_accept"):
-		openDoor()
+		interact()
 		
 	for body in get_overlapping_areas():
 		match body.get_collision_layer():
 			Global.movingTileLayer:
 				await move(body.dir)
+			Global.stairsLayer:
+				var partner = body.Partner
+				
+				# turn off colition
+				partner.Collider.disabled = true
+				
+				# teleport player
+				position = partner.position
+				fog.clearCell(currentPos(), Vector2i(inputs[lastDir]))
+				
+				# turn player
+				await move(partner.SpawnLocation)
+				
+				# turn off colition
+				partner.Collider.disabled = false
 			_:
 				pass
 	
 
-func openDoor():
+func interact():
 	var obj = ray.get_collider()
 	
 	if obj != null && obj.get_class() == "Area2D":
@@ -49,13 +64,19 @@ func openDoor():
 				obj.get_node("AnimationPlayer").play("DoorClose")
 			Global.oneWayDoorLayer:
 				if obj.get_node("Ray").is_colliding():
-					movePlayer(lastDir, 2)
+					moving = true
+					obj.get_node("AnimationPlayer").play("DoorOpen")
+					await obj.get_node("AnimationPlayer").animation_finished
+					await movePlayer(lastDir, 2)
+					obj.get_node("AnimationPlayer").play("DoorClose")
 			Global.movingTileLayer:
 				movePlayer(lastDir, 2)
+			Global.treasureLayer:
+				obj.OpenTreasure()
 			_:
 				pass
 
-func move(dir):
+func move(dir: String):
 	$AnimationPlayer.play(dir)
 	lastDir = dir
 	ray.target_position = inputs[dir] * tileSize

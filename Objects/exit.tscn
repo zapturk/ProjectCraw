@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://pr80dm7f5a18"]
+
+[ext_resource type="Texture2D" uid="uid://bptmwilu7xmtu" path="res://Assets/Exit.png" id="1_s0cm0"]
+[ext_resource type="Script" path="res://Objects/exit.gd" id="1_y80so"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a3mby"]
+size = Vector2(16, 16)
+
+[node name="Exit" type="Area2D"]
+collision_layer = 32
+collision_mask = 2
+script = ExtResource("1_y80so")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_s0cm0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_a3mby")

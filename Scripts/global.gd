@@ -5,6 +5,9 @@ const playerLayer: int = 2
 const doorLayer: int = 4
 const oneWayDoorLayer: int = 8
 const movingTileLayer: int = 16
+const exitLayer: int = 32
+const treasureLayer: int = 64
+const stairsLayer: int = 128
 
 
 # Called when the node enters the scene tree for the first time.
@@ -13,5 +16,5 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
