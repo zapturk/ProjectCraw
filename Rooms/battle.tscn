@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=3 uid="uid://cythgkhp7fw8w"]
+
+[ext_resource type="Texture2D" uid="uid://b27yvqktwtn80" path="res://Assets/Monsters/Octopus.png" id="1_pqxrw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ik3mj"]
+bg_color = Color(1, 1, 1, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_60ibl"]
+bg_color = Color(0.670588, 0, 0, 1)
+anti_aliasing = false
+
+[node name="Battle" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -72.0
+offset_right = 80.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 2
+offset_left = -16.0
+offset_top = -24.0
+offset_right = 16.0
+offset_bottom = -20.0
+size_flags_horizontal = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_ik3mj")
+theme_override_styles/fill = SubResource("StyleBoxFlat_60ibl")
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="Enemy" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -15.0
+offset_right = 16.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_pqxrw")
