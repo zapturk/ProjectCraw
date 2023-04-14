@@ -4,11 +4,25 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ik3mj"]
 bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 2
 corner_detail = 1
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
 anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_60ibl"]
 bg_color = Color(0.670588, 0, 0, 1)
+corner_detail = 1
 anti_aliasing = false
 
 [node name="Battle" type="Control"]
