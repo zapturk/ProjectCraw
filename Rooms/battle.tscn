@@ -1,14 +1,14 @@
 [gd_scene load_steps=18 format=3 uid="uid://cythgkhp7fw8w"]
 
-[ext_resource type="Texture2D" uid="uid://dr6gk6nbjw1eo" path="res://Assets/Battle/Background.png" id="1_5k442"]
+[ext_resource type="Texture2D" uid="uid://fhsqnw3fixsy" path="res://Assets/Battle/Background.png" id="1_5k442"]
 [ext_resource type="Script" path="res://Rooms/battle.gd" id="1_f606x"]
-[ext_resource type="Texture2D" uid="uid://bim4qq34mt48l" path="res://Assets/Battle/CedarHPBar.png" id="2_2emay"]
-[ext_resource type="Texture2D" uid="uid://cajubddi3oy0e" path="res://Assets/Battle/MonsterHPBar.png" id="3_xybl7"]
-[ext_resource type="Texture2D" uid="uid://dprjw1ehfr4gq" path="res://Assets/Battle/WARRIOR_COMBAT_SPRITE-SHEET.png" id="4_eu7y1"]
-[ext_resource type="Texture2D" uid="uid://b5bibegpvwu7r" path="res://Assets/Battle/BattleMenu.png" id="5_7d8m6"]
-[ext_resource type="Texture2D" uid="uid://b4m6ytnrnvcjc" path="res://Assets/Battle/Selector.png" id="8_61xsn"]
-[ext_resource type="Texture2D" uid="uid://c0tw0l80q67uk" path="res://Assets/Battle/Monster.png" id="9_7t7qa"]
-[ext_resource type="FontFile" uid="uid://d28eya1wc0fb7" path="res://Assets/Font/Yana5x5.ttf" id="9_mtd6o"]
+[ext_resource type="Texture2D" uid="uid://b8aeyxk2rr182" path="res://Assets/Battle/CedarHPBar.png" id="2_2emay"]
+[ext_resource type="Texture2D" uid="uid://bri3q24cjs0ex" path="res://Assets/Battle/MonsterHPBar.png" id="3_xybl7"]
+[ext_resource type="Texture2D" uid="uid://cb4o1aioykluk" path="res://Assets/Battle/WARRIOR_COMBAT_SPRITE-SHEET.png" id="4_eu7y1"]
+[ext_resource type="Texture2D" uid="uid://djmnb3dsh1ee7" path="res://Assets/Battle/BattleMenu.png" id="5_7d8m6"]
+[ext_resource type="Texture2D" uid="uid://2l2aen843mi7" path="res://Assets/Battle/Selector.png" id="8_61xsn"]
+[ext_resource type="Texture2D" uid="uid://c2moj1h0vbyue" path="res://Assets/Battle/Monster.png" id="9_7t7qa"]
+[ext_resource type="FontFile" uid="uid://diqv4ej1viqsh" path="res://Assets/Font/Yana5x5.ttf" id="9_mtd6o"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yvvbq"]
 
