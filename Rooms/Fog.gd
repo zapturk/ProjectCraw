@@ -8,4 +8,4 @@ func clearCell(location: Vector2i, dir: Vector2i):
 	erase_cell(0, location)
 	
 	# 1 in front
-	erase_cell(0, location + dir)
+#	erase_cell(0, location + dir)

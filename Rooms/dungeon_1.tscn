@@ -1,10 +1,10 @@
 [gd_scene load_steps=16 format=3 uid="uid://db1wb2efm50a5"]
 
-[ext_resource type="Texture2D" uid="uid://dloy62rf32m5d" path="res://Assets/BlueTiles.png" id="1_ik30j"]
-[ext_resource type="Texture2D" uid="uid://cvved1ii811s6" path="res://Assets/BlackTiles.png" id="2_i6gun"]
+[ext_resource type="Texture2D" uid="uid://chvyx57m8sgkj" path="res://Assets/BlueTiles.png" id="1_ik30j"]
+[ext_resource type="Texture2D" uid="uid://bv47j8jlbxwlj" path="res://Assets/BlackTiles.png" id="2_i6gun"]
 [ext_resource type="PackedScene" uid="uid://ce1cwqakn6s3v" path="res://Objects/player.tscn" id="3_fgul1"]
 [ext_resource type="PackedScene" uid="uid://bhp5advgq1oto" path="res://Objects/door.tscn" id="3_ol522"]
-[ext_resource type="Texture2D" uid="uid://1fg8kn5rdpdl" path="res://Assets/Fog.png" id="4_skdow"]
+[ext_resource type="Texture2D" uid="uid://cftabg3nv2ahs" path="res://Assets/Fog.png" id="4_skdow"]
 [ext_resource type="Script" path="res://Rooms/Fog.gd" id="5_28r7j"]
 [ext_resource type="PackedScene" uid="uid://b61d31qd7laox" path="res://Objects/one_way_door.tscn" id="7_jvgh0"]
 [ext_resource type="PackedScene" uid="uid://pr80dm7f5a18" path="res://Objects/exit.tscn" id="9_oaq1s"]
