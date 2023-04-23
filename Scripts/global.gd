@@ -8,6 +8,7 @@ const movingTileLayer: int = 16
 const exitLayer: int = 32
 const treasureLayer: int = 64
 const stairsLayer: int = 128
+var inBattle: bool = false
 
 
 # Called when the node enters the scene tree for the first time.

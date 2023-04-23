@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsy86cudr3x2g"]
+
+[ext_resource type="Texture2D" uid="uid://bri3q24cjs0ex" path="res://Assets/Battle/MonsterHPBar.png" id="1_qtkvs"]
+[ext_resource type="FontFile" uid="uid://diqv4ej1viqsh" path="res://Assets/Font/Yana5x5.ttf" id="2_q1nir"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yvvbq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_60ibl"]
+bg_color = Color(0.835294, 0.247059, 0.188235, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_v0ovw"]
+font = ExtResource("2_q1nir")
+
+[node name="MonsterHP" type="Sprite2D"]
+position = Vector2(-40, -56)
+texture = ExtResource("1_qtkvs")
+
+[node name="HP" type="ProgressBar" parent="."]
+texture_filter = 1
+texture_repeat = 1
+offset_left = -22.0
+offset_top = 1.0
+offset_right = 26.0
+offset_bottom = 4.0
+size_flags_horizontal = 4
+theme_override_styles/background = SubResource("StyleBoxEmpty_yvvbq")
+theme_override_styles/fill = SubResource("StyleBoxFlat_60ibl")
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="Name" type="Label" parent="."]
+offset_left = -11.0
+offset_top = -12.0
+offset_right = 16.0
+offset_bottom = 3.0
+text = "BAT"
+label_settings = SubResource("LabelSettings_v0ovw")
+
+[node name="Level" type="Label" parent="."]
+offset_left = -22.0
+offset_top = -12.0
+offset_right = -14.0
+offset_bottom = 3.0
+text = "99"
+label_settings = SubResource("LabelSettings_v0ovw")

@@ -19,7 +19,7 @@ func _ready():
 	fog.clearCell(currentPos(), Vector2i(lastDir))
 	
 func _physics_process(_delta):
-	if moving:
+	if moving or Global.inBattle:
 		return
 		
 	for dir in inputs.keys():

@@ -19,7 +19,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0]
+"values": [2]
 }
 
 [sub_resource type="Animation" id="Animation_syfnq"]
@@ -168,6 +168,7 @@ script = ExtResource("1_3lgjh")
 texture = ExtResource("2_vp77c")
 hframes = 4
 vframes = 5
+frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ylwjh")
