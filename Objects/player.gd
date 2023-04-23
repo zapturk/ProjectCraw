@@ -77,7 +77,7 @@ func interact():
 				pass
 
 func move(dir: String):
-	$AnimationPlayer.play(dir)
+	$AnimationPlayer.play("idle_" + dir)
 	lastDir = dir
 	ray.target_position = inputs[dir] * tileSize
 	ray.force_raycast_update()
@@ -88,11 +88,13 @@ func move(dir: String):
 
 func movePlayer(dir, numOftimes = 1):
 	for x in numOftimes:
+		$AnimationPlayer.play(dir)
 		var tween = get_tree().create_tween()
 		tween.tween_property(self, "position", position + inputs[dir] * tileSize, 1.0/4).set_trans(Tween.TRANS_SINE)
 		moving = true
 		await tween.finished
 		fog.clearCell(currentPos(), Vector2i(inputs[lastDir]))
+		$AnimationPlayer.play("idle_" + dir)
 		moving = false
 		
 func currentPos():

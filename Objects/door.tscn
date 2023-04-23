@@ -1,37 +1,37 @@
 [gd_scene load_steps=7 format=3 uid="uid://bhp5advgq1oto"]
 
-[ext_resource type="Texture2D" uid="uid://f7bofio1xiwn" path="res://Assets/NormalDoor.png" id="1_q3jue"]
+[ext_resource type="Texture2D" uid="uid://clc46d8q3jsrl" path="res://Assets/NewDoor.png" id="1_7i4xg"]
 
 [sub_resource type="Animation" id="Animation_b20u6"]
 resource_name = "DoorClose"
-length = 0.8
+length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [7, 6, 5, 4, 3, 2, 1, 0]
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_uwjyp"]
 resource_name = "DoorOpen"
-length = 0.8
+length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7]
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_b604p"]
@@ -39,14 +39,14 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0]
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j1hny"]
@@ -64,8 +64,7 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_q3jue")
-hframes = 8
+texture = ExtResource("1_7i4xg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Sprite2D")
