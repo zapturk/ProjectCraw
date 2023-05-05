@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsy86cudr3x2g"]
+[gd_scene load_steps=7 format=3 uid="uid://dsy86cudr3x2g"]
 
-[ext_resource type="Texture2D" uid="uid://bri3q24cjs0ex" path="res://Assets/Battle/MonsterHPBar.png" id="1_qtkvs"]
-[ext_resource type="FontFile" uid="uid://diqv4ej1viqsh" path="res://Assets/Font/Yana5x5.ttf" id="2_q1nir"]
+[ext_resource type="Texture2D" uid="uid://cajubddi3oy0e" path="res://Assets/Battle/MonsterHPBar.png" id="1_qtkvs"]
+[ext_resource type="FontFile" uid="uid://d28eya1wc0fb7" path="res://Assets/Font/Yana5x5.ttf" id="2_q1nir"]
+[ext_resource type="Script" path="res://Objects/monster_hp.gd" id="2_s7fqw"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yvvbq"]
 
@@ -16,6 +17,7 @@ font = ExtResource("2_q1nir")
 [node name="MonsterHP" type="Sprite2D"]
 position = Vector2(-40, -56)
 texture = ExtResource("1_qtkvs")
+script = ExtResource("2_s7fqw")
 
 [node name="HP" type="ProgressBar" parent="."]
 texture_filter = 1

@@ -15,13 +15,22 @@ func _process(delta):
 func startBattle():
 	Global.inBattle = true
 	$Monster.visible = false
-	var monster: int = randi_range(0,27)
-	$Monster.frame = monster
+	$MonsterHP.visible = false
+	var monster = MonsterStats.getMonster(randi_range(0,2))
+	
+	
+	# set up monster
+	$Monster.frame = monster.id
+	$MonsterHP/Name.text = monster.name
+	$MonsterHP/Level.text = monster.level
+	$MonsterHP/HP.value = (monster.hp / monster.hp) * 100
+	
 	
 	visible = true
 	$AnimationPlayer.play("BattleBox")
 	await  $AnimationPlayer.animation_finished
 	$Monster.visible = true
+	$MonsterHP.visible = true
 	
 
 func endBattle():

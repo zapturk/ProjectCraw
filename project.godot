@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://Scripts/global.gd"
+MonsterStats="*res://Scripts/monster_stats.gd"
 
 [display]
 

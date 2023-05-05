@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://cpxe2cpk4sc48"]
 
-[ext_resource type="Texture2D" uid="uid://dtsytjmuqkabf" path="res://Assets/BattleStart.png" id="1_0ici5"]
+[ext_resource type="Texture2D" uid="uid://cnktktd7n8wx5" path="res://Assets/BattleStart.png" id="1_0ici5"]
 [ext_resource type="Script" path="res://Objects/battle.gd" id="1_qjxx5"]
-[ext_resource type="Texture2D" uid="uid://brom73qknplmh" path="res://Assets/MonsterSheet.png" id="2_iutx5"]
+[ext_resource type="Texture2D" uid="uid://bq8mb0himi67k" path="res://Assets/MonsterSheet.png" id="2_iutx5"]
 [ext_resource type="PackedScene" uid="uid://dsy86cudr3x2g" path="res://Objects/monster_hp.tscn" id="4_rgys2"]
 
 [sub_resource type="Animation" id="Animation_euygr"]

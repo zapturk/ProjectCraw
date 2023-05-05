@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bhp5advgq1oto"]
 
-[ext_resource type="Texture2D" uid="uid://clc46d8q3jsrl" path="res://Assets/NewDoor.png" id="1_7i4xg"]
+[ext_resource type="Texture2D" uid="uid://cy72qb2pjy7qt" path="res://Assets/NewDoor.png" id="1_7i4xg"]
 
 [sub_resource type="Animation" id="Animation_b20u6"]
 resource_name = "DoorClose"
