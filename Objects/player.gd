@@ -24,7 +24,7 @@ func _physics_process(_delta):
 		
 	for dir in inputs.keys():
 		if Input.is_action_pressed(dir):
-			move(dir)
+			await move(dir)
 	if Input.is_action_just_pressed("ui_accept"):
 		interact()
 		
@@ -82,7 +82,11 @@ func move(dir: String):
 	ray.target_position = inputs[dir] * tileSize
 	ray.force_raycast_update()
 	if !ray.is_colliding():
-		movePlayer(dir)
+		await movePlayer(dir)
+		
+		# see if there is a randon encounter
+		if randi_range(1,255) < 25:
+			$Battle.startBattle()
 	else:
 		fog.clearCell(currentPos(), Vector2i(inputs[lastDir]))
 
