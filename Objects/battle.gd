@@ -23,11 +23,10 @@ func startBattle():
 	Global.inBattle = true
 	$Monster.visible = false
 	$MonsterHP.visible = false
-	
+	$BattleMenu.visible = false
 	
 	# just dose a random monster may need to adjust as you level up
 	var monster = MonsterStats.getMonster(randi_range(0,26))
-	
 	
 	# set up monster
 	$Monster.frame = monster.id
@@ -35,12 +34,12 @@ func startBattle():
 	$MonsterHP/Level.text = monster.level
 	$MonsterHP/HP.value = (monster.hp / monster.hp) * 100
 	
-	
 	visible = true
 	$AnimationPlayer.play("BattleBox")
 	await  $AnimationPlayer.animation_finished
 	$Monster.visible = true
 	$MonsterHP.visible = true
+	$BattleMenu.visible = true
 	
 
 func endBattle():
