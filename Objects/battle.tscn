@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://cpxe2cpk4sc48"]
+[gd_scene load_steps=13 format=3 uid="uid://cpxe2cpk4sc48"]
 
 [ext_resource type="Texture2D" uid="uid://cnktktd7n8wx5" path="res://Assets/BattleStart.png" id="1_0ici5"]
 [ext_resource type="Script" path="res://Objects/battle.gd" id="1_qjxx5"]
 [ext_resource type="Texture2D" uid="uid://bq8mb0himi67k" path="res://Assets/MonsterSheet.png" id="2_iutx5"]
 [ext_resource type="PackedScene" uid="uid://dsy86cudr3x2g" path="res://Objects/monster_hp.tscn" id="4_rgys2"]
+[ext_resource type="PackedScene" uid="uid://uts1673fbni4" path="res://Objects/textbox.tscn" id="5_77tp6"]
 [ext_resource type="Texture2D" uid="uid://b5bibegpvwu7r" path="res://Assets/Battle/BattleMenu.png" id="5_s47l8"]
 [ext_resource type="Texture2D" uid="uid://b4m6ytnrnvcjc" path="res://Assets/Battle/Selector.png" id="6_j0idr"]
 [ext_resource type="FontFile" uid="uid://d28eya1wc0fb7" path="res://Assets/Font/Yana5x5.ttf" id="7_oxh2a"]
@@ -69,6 +70,8 @@ libraries = {
 
 [node name="MonsterHP" parent="." instance=ExtResource("4_rgys2")]
 position = Vector2(0, -40)
+
+[node name="Textbox" parent="." instance=ExtResource("5_77tp6")]
 
 [node name="BattleMenu" type="Sprite2D" parent="."]
 position = Vector2(0, 56)

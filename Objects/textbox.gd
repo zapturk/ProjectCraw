@@ -19,9 +19,9 @@ var textQueue = []
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	HideTextbox()
-	QueueText("The quick brown fox jumps over the lazy dog!")
-	QueueText("Next set of text.")
-	QueueText("Last set of text.")
+#	QueueText("The quick brown fox jumps over the lazy dog!")
+#	QueueText("Next set of text.")
+#	QueueText("Last set of text.")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
