@@ -6,6 +6,7 @@ const CHAR_READ_RATE = 0.05
 @onready var endSymble = $TextboxContainer/MarginContainer/HBoxContainer/End
 @onready var text = $TextboxContainer/MarginContainer/HBoxContainer/Text
 @onready var tween = create_tween()
+signal textDone
 
 enum state {
 	READY,
@@ -13,7 +14,7 @@ enum state {
 	FINISHED
 }
 
-var currenState = state.READY
+@export var currenState = state.READY
 var textQueue = []
 
 # Called when the node enters the scene tree for the first time.
@@ -47,6 +48,8 @@ func HideTextbox():
 	text.text = ""
 	endSymble.text = ""
 	textboxContainer.hide()
+	textDone.emit()
+	
 
 func ShowTextbox():
 	textboxContainer.show()

@@ -21,14 +21,14 @@ func _ready():
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if currenState == state.READY:
 		if Input.is_action_just_pressed("ui_up"):
 			moveSelectorUp()
 		if Input.is_action_just_pressed("ui_down"):
 			moveSelectorDown()
 		if Input.is_action_just_pressed("ui_accept"):
-				currenState == state.TEXTBOX
+				currenState = state.TEXTBOX
 				battleActions()
 
 func startBattle():
@@ -45,6 +45,7 @@ func startBattle():
 	$MonsterHP/Name.text = monster.name
 	$MonsterHP/Level.text = monster.level
 	$MonsterHP/HP.value = (monster.hp / monster.hp) * 100
+	Selector.position = attackOption
 	
 	visible = true
 	$AnimationPlayer.play("BattleBox")
@@ -66,10 +67,12 @@ func battleActions():
 		else:
 			Selector.position = attackOption
 			$Textbox.QueueText("Can't excape.")
+			await Signal($Textbox, 'textDone')
 			currenState = state.READY
 
 func endBattle():
 	$Textbox.QueueText("You got away safely!")
+	await Signal($Textbox, 'textDone')
 	visible = false
 	$AnimationPlayer.play("RESET")
 	Global.inBattle = false
