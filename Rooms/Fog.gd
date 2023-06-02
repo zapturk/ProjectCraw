@@ -6,7 +6,7 @@ func _ready():
 	visible = true
 #	pass
 
-func clearCell(location: Vector2i, dir: Vector2i):
+func clearCell(location: Vector2i, _dir: Vector2i):
 	# Center
 	erase_cell(0, location)
 	

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d20hc1ff86pud"]
 
 [ext_resource type="Script" path="res://Objects/treasure.gd" id="1_l6xqy"]
-[ext_resource type="Texture2D" uid="uid://dd10wnibgey5q" path="res://Assets/Treasure.png" id="1_pygbi"]
+[ext_resource type="Texture2D" uid="uid://bgthg8yp8pe7c" path="res://Assets/Treasure.png" id="1_pygbi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5yvnl"]
 size = Vector2(16, 16)

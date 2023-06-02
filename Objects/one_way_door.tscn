@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://b61d31qd7laox"]
 
 [ext_resource type="Script" path="res://Objects/one_way_door.gd" id="1_35x6h"]
-[ext_resource type="Texture2D" uid="uid://bvhsfxcq25mf" path="res://Assets/NewOneWay.png" id="1_pa4h5"]
+[ext_resource type="Texture2D" uid="uid://bmlyliks6hvyw" path="res://Assets/NewOneWay.png" id="1_pa4h5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qol3d"]
 size = Vector2(16, 16)

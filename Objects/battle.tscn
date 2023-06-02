@@ -1,13 +1,13 @@
 [gd_scene load_steps=13 format=3 uid="uid://cpxe2cpk4sc48"]
 
-[ext_resource type="Texture2D" uid="uid://cnktktd7n8wx5" path="res://Assets/BattleStart.png" id="1_0ici5"]
+[ext_resource type="Texture2D" uid="uid://cehmci8dccs1s" path="res://Assets/BattleStart.png" id="1_0ici5"]
 [ext_resource type="Script" path="res://Objects/battle.gd" id="1_qjxx5"]
-[ext_resource type="Texture2D" uid="uid://bq8mb0himi67k" path="res://Assets/MonsterSheet.png" id="2_iutx5"]
+[ext_resource type="Texture2D" uid="uid://c870a7s4rixhj" path="res://Assets/MonsterSheet.png" id="2_iutx5"]
 [ext_resource type="PackedScene" uid="uid://dsy86cudr3x2g" path="res://Objects/monster_hp.tscn" id="4_rgys2"]
 [ext_resource type="PackedScene" uid="uid://uts1673fbni4" path="res://Objects/textbox.tscn" id="5_77tp6"]
-[ext_resource type="Texture2D" uid="uid://b5bibegpvwu7r" path="res://Assets/Battle/BattleMenu.png" id="5_s47l8"]
-[ext_resource type="Texture2D" uid="uid://b4m6ytnrnvcjc" path="res://Assets/Battle/Selector.png" id="6_j0idr"]
-[ext_resource type="FontFile" uid="uid://d28eya1wc0fb7" path="res://Assets/Font/Yana5x5.ttf" id="7_oxh2a"]
+[ext_resource type="Texture2D" uid="uid://ch8xhj4j23h0k" path="res://Assets/Battle/BattleMenu.png" id="5_s47l8"]
+[ext_resource type="Texture2D" uid="uid://brn0utrv4vdhv" path="res://Assets/Battle/Selector.png" id="6_j0idr"]
+[ext_resource type="FontFile" uid="uid://bh8xk15o7jq2q" path="res://Assets/Font/Yana5x5.ttf" id="7_oxh2a"]
 
 [sub_resource type="Animation" id="Animation_euygr"]
 resource_name = "BattleBox"

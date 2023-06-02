@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dsy86cudr3x2g"]
 
-[ext_resource type="Texture2D" uid="uid://cajubddi3oy0e" path="res://Assets/Battle/MonsterHPBar.png" id="1_qtkvs"]
-[ext_resource type="FontFile" uid="uid://d28eya1wc0fb7" path="res://Assets/Font/Yana5x5.ttf" id="2_q1nir"]
+[ext_resource type="Texture2D" uid="uid://ce2h7eyqkfa7p" path="res://Assets/Battle/MonsterHPBar.png" id="1_qtkvs"]
+[ext_resource type="FontFile" uid="uid://bh8xk15o7jq2q" path="res://Assets/Font/Yana5x5.ttf" id="2_q1nir"]
 [ext_resource type="Script" path="res://Objects/monster_hp.gd" id="2_s7fqw"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yvvbq"]

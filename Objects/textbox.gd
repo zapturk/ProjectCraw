@@ -25,7 +25,7 @@ func _ready():
 #	QueueText("Last set of text.")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	match currenState:
 		state.READY:
 			if !textQueue.is_empty():
