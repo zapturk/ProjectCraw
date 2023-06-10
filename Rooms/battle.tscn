@@ -1,14 +1,14 @@
 [gd_scene load_steps=18 format=3 uid="uid://cythgkhp7fw8w"]
 
-[ext_resource type="Texture2D" uid="uid://dr6gk6nbjw1eo" path="res://Assets/Battle/Background.png" id="1_5k442"]
+[ext_resource type="Texture2D" uid="uid://7vqt68thj6p2" path="res://Assets/Battle/Background.png" id="1_5k442"]
 [ext_resource type="Script" path="res://Rooms/battle.gd" id="1_f606x"]
-[ext_resource type="Texture2D" uid="uid://bim4qq34mt48l" path="res://Assets/Battle/CedarHPBar.png" id="2_2emay"]
-[ext_resource type="Texture2D" uid="uid://dprjw1ehfr4gq" path="res://Assets/Battle/WARRIOR_COMBAT_SPRITE-SHEET.png" id="4_eu7y1"]
-[ext_resource type="Texture2D" uid="uid://b5bibegpvwu7r" path="res://Assets/Battle/BattleMenu.png" id="5_7d8m6"]
+[ext_resource type="Texture2D" uid="uid://u0ytoooakvph" path="res://Assets/Battle/CedarHPBar.png" id="2_2emay"]
+[ext_resource type="Texture2D" uid="uid://dd26f02qiufr2" path="res://Assets/Battle/WARRIOR_COMBAT_SPRITE-SHEET.png" id="4_eu7y1"]
+[ext_resource type="Texture2D" uid="uid://ch8xhj4j23h0k" path="res://Assets/Battle/BattleMenu.png" id="5_7d8m6"]
 [ext_resource type="PackedScene" uid="uid://dsy86cudr3x2g" path="res://Objects/monster_hp.tscn" id="5_qrbhk"]
-[ext_resource type="Texture2D" uid="uid://b4m6ytnrnvcjc" path="res://Assets/Battle/Selector.png" id="8_61xsn"]
-[ext_resource type="Texture2D" uid="uid://c0tw0l80q67uk" path="res://Assets/Battle/Monster.png" id="9_7t7qa"]
-[ext_resource type="FontFile" uid="uid://d28eya1wc0fb7" path="res://Assets/Font/Yana5x5.ttf" id="9_mtd6o"]
+[ext_resource type="Texture2D" uid="uid://brn0utrv4vdhv" path="res://Assets/Battle/Selector.png" id="8_61xsn"]
+[ext_resource type="Texture2D" uid="uid://wqsjs743c8lk" path="res://Assets/Battle/Monster.png" id="9_7t7qa"]
+[ext_resource type="FontFile" uid="uid://bh8xk15o7jq2q" path="res://Assets/Font/Yana5x5.ttf" id="9_mtd6o"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yvvbq"]
 

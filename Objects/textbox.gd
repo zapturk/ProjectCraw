@@ -39,7 +39,8 @@ func _process(_delta):
 			endSymble.text = "v"
 			if Input.is_action_just_pressed("ui_accept"):
 				ChangeState(state.READY)
-				HideTextbox()
+				if textQueue.is_empty():
+					HideTextbox()
 				
 func QueueText(nextText: String):
 	textQueue.push_back(nextText)
