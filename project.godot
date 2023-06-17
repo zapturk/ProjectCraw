@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Global="*res://Scripts/global.gd"
 MonsterStats="*res://Scripts/monster_stats.gd"
+PlayerStats="*res://Scripts/player_stats.gd"
 
 [display]
 

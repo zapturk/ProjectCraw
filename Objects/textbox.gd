@@ -50,7 +50,6 @@ func HideTextbox():
 	endSymble.text = ""
 	textboxContainer.hide()
 	textDone.emit()
-	
 
 func ShowTextbox():
 	textboxContainer.show()

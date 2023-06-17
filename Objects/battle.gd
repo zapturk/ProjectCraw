@@ -49,10 +49,11 @@ func startBattle():
 	monsterCurrentHP = monster.hp
 	$MonsterHP/HP.value = (monsterCurrentHP / monster.hp) * 100
 	Selector.position = attackOption
+	updateHpAndMp()
 	
 	visible = true
 	$AnimationPlayer.play("BattleBox")
-	await  $AnimationPlayer.animation_finished
+	await $AnimationPlayer.animation_finished
 	$Monster.visible = true
 	$MonsterHP.visible = true
 	$BattleMenu.visible = true
@@ -61,7 +62,13 @@ func startBattle():
 func battleActions():
 	var pos: Vector2 = Selector.position
 	if(pos.is_equal_approx(attackOption)):
-		playerAttack()
+		if(PlayerStats.spe >= monster.spe):
+			playerAttack()
+			if $MonsterHP/HP.value > 0.0:
+				monsterAttack()
+		else:
+			monsterAttack()
+			playerAttack()
 	elif(pos.is_equal_approx(skillOption)):
 		currenState = state.READY
 	elif(pos.is_equal_approx(fleeOption)):
@@ -70,6 +77,10 @@ func battleActions():
 		else:
 			cantExcape()
 
+func updateHpAndMp():
+	$BattleMenu/HP.text = "HP: " + str(PlayerStats.currentHp) + "/" + str(PlayerStats.hp)
+	$BattleMenu/MP.text = "MP: " + str(PlayerStats.currentMp) + "/" + str(PlayerStats.mp)
+
 func cantExcape():
 	Selector.position = attackOption
 	$Textbox.QueueText("Can't excape.")
@@ -77,10 +88,27 @@ func cantExcape():
 	currenState = state.READY
 
 func playerAttack():
-	var damage:int = (10 - monster.def) * randf_range(.9, 1.1)
+	var damage:int = (PlayerStats.att - monster.def) * randf_range(.8, 1.2)
 	$Textbox.QueueText("You did " + str(damage) + " to " + monster.name + ".")
 	monsterCurrentHP -= damage
 	$MonsterHP/HP.value = (monsterCurrentHP / monster.hp) * 100.0
+	
+	if $MonsterHP/HP.value <= 0.0:
+		$Textbox.QueueText("You defeated " + monster.name + ".")
+		await Signal($Textbox, 'textDone')
+		endBattle()
+	else:
+		await Signal($Textbox, 'textDone')
+		currenState = state.READY
+
+func monsterAttack():
+	var damage:int = (monster.att - PlayerStats.def) * randf_range(.9, 1.1)
+	if damage < 0:
+		damage = 0
+	$Textbox.QueueText(monster.name + " did " + str(damage) + " to you.")
+	PlayerStats.currentHp -= damage
+	updateHpAndMp()
+#	$MonsterHP/HP.value = (monsterCurrentHP / monster.hp) * 100.0
 	
 	if $MonsterHP/HP.value <= 0.0:
 		$Textbox.QueueText("You defeated " + monster.name + ".")
