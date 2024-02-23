@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://uts1673fbni4"]
 
 [ext_resource type="Script" path="res://Objects/textbox.gd" id="1_7gcr5"]
-[ext_resource type="Texture2D" uid="uid://ch8xhj4j23h0k" path="res://Assets/Battle/BattleMenu.png" id="1_qtosj"]
-[ext_resource type="FontFile" uid="uid://bh8xk15o7jq2q" path="res://Assets/Font/Yana5x5.ttf" id="2_f1tc8"]
+[ext_resource type="Texture2D" uid="uid://dmi3dj50vnr4y" path="res://Assets/Battle/BattleMenu.png" id="1_qtosj"]
+[ext_resource type="FontFile" uid="uid://cr3jv5w0y5tsi" path="res://Assets/Font/Yana5x5.ttf" id="2_f1tc8"]
 
 [node name="Textbox" type="CanvasLayer"]
 script = ExtResource("1_7gcr5")
